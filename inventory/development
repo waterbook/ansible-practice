@@ -1,9 +1,9 @@
 [lbservers]
-lb
+lb.devops-book.local
 
 [webservers]
-web1
-web2
+web1.devops-book.local
+web2.devops-book.local
 
 [ciservers]
 localhost
