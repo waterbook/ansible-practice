@@ -13,9 +13,9 @@ describe user("{{ nginx_user.username }}") do
   it { should have_login_shell '{{ nginx_user.shell }}'}
 end
 
-describe package('nginx') do
-  it { should be_installed.with_version('{{ nginx_version }}') }
-end
+#describe package('nginx') do
+#  it { should be_installed.with_version('{{ nginx_version }}') }
+#end
 
 describe file('{{ nginx_documentroot }}') do
   it { should exist }
