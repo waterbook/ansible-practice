@@ -8,8 +8,9 @@
   user: name={{ nginx_user.username }} state=present shell={{ nginx_user.shell }} home={{ nginx_user.home }} group={{ nginx_user.groupname }} uid={{ nginx_user.uid }}
 
 - name: install nginx
-  yum: name=nginx-{{ nginx_version }} state=installed 
-
+#  yum: name=nginx-{{ nginx_version }} state=installed 
+  yum: name=http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm state=present
+  
 - name: create directory of document root
   file: path={{ nginx_documentroot }} state=directory mode=0755 owner={{ nginx_user.username }} group={{ nginx_user.groupname }}
 
