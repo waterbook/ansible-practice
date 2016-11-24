@@ -9,7 +9,6 @@
 
 - name: install nginx
 #  yum: name=nginx-{{ nginx_version }} state=installed 
-#  yum: name=http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm state=present
   yum: name=nginx state=installed 
   
 - name: create directory of document root
